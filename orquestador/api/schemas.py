@@ -1,13 +1,15 @@
 from pydantic import BaseModel
 
 class UserRequest(BaseModel): 
-    num_processes = 4
-    generar_video_qr = True
-    factor_lentitud = 0.5
-    baya_thresh = 0.7*150
-    qr_thresh = 120
-    cant_nubes = 1 
-    calib_file = 'MotorolaG200_Javo_Vertical.yaml'
-    qr_dist = 2.1
-    dists_list = [10, 40, 5],
-    num_points = 100
+    num_processes: int
+    generar_video_qr: bool
+    factor_lentitud: float
+    baya_thresh: float
+    qr_thresh: float
+    cant_nubes: int
+    calib_file: str 
+    qr_dist: float
+    dists_list: list[int]
+    num_points: int
+    umbral_triangulacion: float
+    max_workers_triangulacion: int

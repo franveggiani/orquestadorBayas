@@ -56,7 +56,7 @@ def tracker_http_task(
     draw_circles: bool,
     draw_tracking: bool
 ) -> Dict[str, Any]:
-    """Tarea asíncrona para el tracker usando HTTPX"""
+    
     payload = {
         'input_folder': input_folder,
         'output_folder': output_folder,
@@ -80,7 +80,7 @@ def nubes_http_task(
     input_folder: str, 
     output_folder: str, 
     video_name: str, 
-    baya_thresh: float, 
+    bayas_thresh: float, 
     qr_thresh: float, 
     cant_nubes: int, 
     calib_file: str, 
@@ -95,7 +95,7 @@ def nubes_http_task(
         'input_folder': input_folder,
         'output_folder': output_folder,
         'video_name': video_name,
-        'baya_threshold': baya_thresh,
+        'baya_threshold': bayas_thresh,
         'qr_threshold': qr_thresh,
         'cantidad_nubes': cant_nubes,
         'calib_file': calib_file,
