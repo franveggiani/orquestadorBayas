@@ -1,0 +1,24 @@
+
+PARA BUILDEAR EL CONTENEDOR
+
+docker build -t detector-nuevo:latest .
+
+PARA LEVANTAR LA API
+
+docker run --rm \
+  --gpus all \
+  --name detector-nuevo \
+  -p 8001:8001 \
+  -v "./models/2022.11.30_grapes_mix_iou.pth:/models/2022.11.30_grapes_mix_iou.pth:ro" \
+  -v "$PWD/videos:/videos" \
+  detector-nuevo:latest
+
+PARA INICIAR EL PROCESO
+
+curl -X POST http://localhost:8001/detector_task \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "input_folder": "/videos/input",
+    "output_folder": "/videos/output",
+    "video_name": "001_VID_20230322_173221"
+  }'

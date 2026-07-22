@@ -14,12 +14,18 @@ RUN apt-get update && apt-get install -y \
     libopenslide-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Instalar Miniconda
+# Instalar una version de Miniconda compatible con Ubuntu 18.04 / glibc 2.27
+ARG MINICONDA_VERSION=py37_4.12.0
+ARG MINICONDA_SHA256=4dc4214839c60b2f5eb3efbdee1ef5d9b45e74f2c09fcae6c8934a13f36ffc3e
+
 ENV CONDA_DIR=/opt/conda
-RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
-    bash ~/miniconda.sh -b -p $CONDA_DIR && \
-    rm ~/miniconda.sh
-ENV PATH=$CONDA_DIR/bin:$PATH
+RUN wget --quiet \
+        "https://repo.anaconda.com/miniconda/Miniconda3-${MINICONDA_VERSION}-Linux-x86_64.sh" \
+        -O /tmp/miniconda.sh && \
+    echo "${MINICONDA_SHA256}  /tmp/miniconda.sh" | sha256sum --check --strict && \
+    bash /tmp/miniconda.sh -b -p "${CONDA_DIR}" && \
+    rm /tmp/miniconda.sh
+ENV PATH="${CONDA_DIR}/bin:${PATH}"
 
 # Actualizar Conda
 RUN conda update -n base conda -y && \
