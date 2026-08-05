@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+models/*.pth
+*.mp4
+*.json
+detector_frames/

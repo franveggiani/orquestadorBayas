@@ -1,0 +1,30 @@
+{
+  "title": "Sistema de código abierto basado en microservicios para la generación automatizada de nubes de puntos 3D densas para investigación en viticultura",
+  "description": "<p>Sistema modular de código abierto para la generación automatizada y reproducible de nubes de puntos 3D densas de racimos de uva. La arquitectura basada en microservicios permite escalar el procesamiento y garantizar la reproducibilidad de los experimentos.</p><p>Integra las siguientes etapas: detección de bayas mediante redes neuronales profundas, seguimiento temporal entre cuadros, reconstrucción tridimensional mediante Structure from Motion y densificación de nubes de puntos.</p><p>Ámbito de aplicación: generación masiva y reproducible de datos para investigación en viticultura de precisión.</p><p>Desarrollado en el Laboratorio DHARMa, Departamento de Sistemas de Información, Facultad Regional Mendoza, Universidad Tecnológica Nacional. El trabajo asociado fue presentado en el XIII Encuentro de Investigadores y Docentes de Ingeniería (EnIDI 2025), Centro Tecnológico de Desarrollo Regional Los Reyunos, Mendoza, octubre de 2025.</p><p>Nivel de madurez tecnológica: TRL 3 (prueba de concepto experimental, validado sobre conjuntos de datos propios en condiciones controladas).</p>",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "language": "spa",
+  "creators": [
+    {
+      "name": "Veggiani Vilches, Franco Nicolás",
+      "affiliation": "Universidad Tecnológica Nacional, Facultad Regional Mendoza"
+    },
+    {
+      "name": "Marinozi, Pablo Agustín",
+      "affiliation": "Universidad Tecnológica Nacional, Facultad Regional Mendoza"
+    },
+    {
+      "name": "Bromberg, Facundo",
+      "affiliation": "Universidad Tecnológica Nacional, Facultad Regional Mendoza / CONICET"
+    }
+  ],
+  "keywords": [
+    "viticultura de precisión",
+    "nubes de puntos 3D",
+    "Structure from Motion",
+    "microservicios",
+    "código abierto",
+    "aprendizaje profundo"
+  ]
+}

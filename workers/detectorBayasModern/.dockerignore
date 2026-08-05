@@ -1,0 +1,9 @@
+.git
+__pycache__
+.pytest_cache
+*.py[cod]
+models/*
+!models/.gitkeep
+*.mp4
+*.json
+detector_frames
